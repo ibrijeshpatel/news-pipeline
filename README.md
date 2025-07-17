@@ -12,10 +12,11 @@ stores them in a SQLite database, and shows the 5 most recent news entries.
 - Output saved to `output/latest_articles.txt`
 
 ## Tech Stack
-- Python 3.9+
+- Python
 - BeautifulSoup
 - Requests
-- SQLite (built-in)
+- SQLite
+- SQL
 
 ## Quickstart
 ```bash
