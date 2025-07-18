@@ -40,33 +40,32 @@ news-pipeline/
 
 
 
-## Getting Started
+# Getting Started
 
-## 🚀 Getting Started
 
-# Step 1: Clone the repository
+## Step 1: Clone the repository
 git clone https://github.com/your-username/news-pipeline.git
 cd news-pipeline
 
-# Step 2: (Recommended) Create and activate a virtual environment
+## Step 2: (Recommended) Create and activate a virtual environment
 python -m venv venv
 
-# On Windows:
+### On Windows:
 venv\Scripts\activate
 
-# On macOS/Linux:
+### On macOS/Linux:
 source venv/bin/activate
 
-# Step 3: Install project dependencies
+## Step 3: Install project dependencies
 pip install -r requirements.txt
 
-# Step 4: Run the news pipeline script
+## Step 4: Run the news pipeline script
 python src/main.py
 
 
 
 
-## After running the script:
+# After running the script:
 
 A news.db SQLite file will be created (if not present)
 New articles will be added (duplicates skipped)
