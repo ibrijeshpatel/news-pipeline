@@ -36,34 +36,4 @@ def fetch_phocuswire():
             continue
     return articles
 
-def fetch_google_news():
-    url = "https://news.google.com/rss/search?q=travel+technology"
-    feed = feedparser.parse(url)
-    articles = []
 
-    for entry in feed.entries:
-        published = entry.get("published_parsed") or entry.get("updated_parsed")
-        published_dt = datetime(*published[:6], tzinfo=timezone.utc) if published else datetime.utcnow().replace(tzinfo=timezone.utc)
-        articles.append({
-            'title': entry.title,
-            'url': entry.link,
-            'published': published_dt,
-            'source': "Google News"
-        })
-    return articles
-
-def fetch_nytimes():
-    url = "https://rss.nytimes.com/services/xml/rss/nyt/Travel.xml"
-    feed = feedparser.parse(url)
-    articles = []
-
-    for entry in feed.entries:
-        published = entry.get("published_parsed") or entry.get("updated_parsed")
-        published_dt = datetime(*published[:6], tzinfo=timezone.utc) if published else datetime.utcnow().replace(tzinfo=timezone.utc)
-        articles.append({
-            'title': entry.title,
-            'url': entry.link,
-            'published': published_dt,
-            'source': "NYTimes"
-        })
-    return articles

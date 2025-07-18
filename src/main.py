@@ -1,5 +1,5 @@
 import os
-from scraper import fetch_skift, fetch_phocuswire, fetch_google_news, fetch_nytimes
+from scraper import fetch_skift, fetch_phocuswire
 from db import init_db, save_article, get_latest_articles
 
 OUTPUT_DIR = "output"
@@ -35,15 +35,6 @@ def main():
     else:
         print("⚠️  PhocusWire returned no articles. Possible reasons: RSS feed not supported, structure changed, or feed temporarily unavailable.")
 
-    # Google News
-    google_articles = fetch_google_news()
-    print(f"🔍 Google News fetched: {len(google_articles)} articles")
-    all_articles.extend(google_articles)
-
-    # NYTimes
-    nytimes_articles = fetch_nytimes()
-    print(f"🔍 NYTimes fetched: {len(nytimes_articles)} articles")
-    all_articles.extend(nytimes_articles)
 
     # Save unique articles
     new_count = 0
