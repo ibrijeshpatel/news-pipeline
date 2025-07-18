@@ -1,10 +1,10 @@
-# News Pipeline: Skift, PhocusWire, Google News & NYTimes Scraper
+# News Pipeline: Skift, and PhocusWire
 
-A Python-powered data pipeline that fetches the latest travel and general news articles from Skift, PhocusWire, Google News, and The New York Times, stores them in a SQLite database, and displays the 5 most recent entries in the terminal and saves them to a text file.
+A Python-powered data pipeline that fetches the latest travel and general news articles from Skift, PhocusWire, stores them in a SQLite database, and displays the 5 most recent entries in the terminal and saves them to a text file.
 
 ## Features
 
-- Multi-source scraping: Skift, Google News, NYTimes (RSS-based), PhocusWire attempted
+- Multi-source scraping: Skift, PhocusWire attempted
 - Incremental loading: Avoids duplicate articles using a hash-based system
 - SQLite storage: Lightweight and local database for persistence
 - Modular structure: Clean, maintainable code in separate modules
