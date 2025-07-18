@@ -1,7 +1,16 @@
+# Python cache and bytecode files
 __pycache__/
 *.pyc
-*.db
-output/
+
+# Virtual environment folder
 venv/
+
+# Environment variables file
 .env
 
+# Database files (SQLite)
+*.db
+
+# Output folder - ignore all except latest_articles.txt
+output/*
+!output/latest_articles.txt
